@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "build-prod" : "ng build --configuration production --base-href https://athlaes.github.io/FindYourWay/",
     "test": "ng test",
     "serve:ssr:FindYourWay": "node dist/find-your-way/server/server.mjs"
   },
