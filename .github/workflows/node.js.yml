@@ -26,12 +26,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build-prod
-    - run: npm test
+    - name: Build SPA
+      run : |
+        npm ci
+        npm run build-prod
+        npm test
     - name: Check modified files
       id: git-check
-      run: echo "modified=$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)" >> $GITHUB_OUTPUT
+      run: |
+        echo "modified=$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)" >> $GITHUB_OUTPUT
+        echo $GITHUB_OUTPUT
     - name: Push changes
       if: steps.git-check.outputs.modified == 'true'
       run: |
