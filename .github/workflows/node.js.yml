@@ -42,6 +42,7 @@ jobs:
         git config --global user.name 'CI/CD'
         git config --global user.email 'chartierlucas@outlook.fr'
         git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
-        git commit -am "[CI/CD] Automated report"
+        git add .
+        git commit -m "[CI/CD] Automated report"
         git push
 
