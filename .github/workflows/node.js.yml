@@ -34,7 +34,7 @@ jobs:
     - name: Check modified files
       id: git-check
       run: |
-        echo "modified=$(if git diff-index --quiet HEAD -- && git diff-files --quiet; then echo "false"; else echo "true"; fi)" >> $GITHUB_OUTPUT
+        echo "modified=$(if [ -n "$(git status --porcelain)" ]; then echo "true"; else echo "false"; fi)" >> $GITHUB_OUTPUT
         cat $GITHUB_OUTPUT
     - name: Push changes
       if: steps.git-check.outputs.modified == 'true'
