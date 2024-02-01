@@ -31,6 +31,7 @@ jobs:
         git config --global user.name 'CI/CD'
         git config --global user.email 'chartierlucas@outlook.fr'
         git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
+        git add .
         git commit -am "Automated changes"
         git push
 
