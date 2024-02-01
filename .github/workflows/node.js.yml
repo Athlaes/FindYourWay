@@ -10,7 +10,7 @@ on:
 env:
   CI: false
 
-jobs:  
+jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -25,7 +25,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build-prod
-    - run: npm test
+    - run: npm test -- --watch=false --browsers=ChromeHeadless
     - name: Push changes
       run: |
         git config --global user.name 'CI/CD'
@@ -33,4 +33,4 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
         git commit -am "Automated changes"
         git push
-    
+
