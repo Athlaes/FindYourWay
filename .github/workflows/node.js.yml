@@ -33,5 +33,5 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
         git add .
         git commit -am "Automated changes"
-        git push origin ${{ github.ref }}
+        git push origin ${{ github.head_ref }}
 
