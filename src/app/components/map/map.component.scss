@@ -50,6 +50,30 @@ body, html {
   top: 0;
 }
 
+.div-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  background-color: #30d5c8;
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #1f9e91;
+}
+
 @media (max-width: 768px) {
   .border-container {
     width: 90%; 
