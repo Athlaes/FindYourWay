@@ -1,15 +1,19 @@
 .border-container {
-  border: 0.5px solid #555555;
+  border: 0.2px solid rgb(169, 160, 160);
   display: flex;
   flex-flow: column nowrap;
   min-width: 70%;
-  max-height: 50%;
-  border-radius: 10px;
+  min-height: 50%;
   padding: 5px;
 }
 
 .full-size {
   width: 100%;
   padding: 0 0 0 0;
+}
+
+.map {
+  height: 512px;
+  padding: 0;
 }
 
