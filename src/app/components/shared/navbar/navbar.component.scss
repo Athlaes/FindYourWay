@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #1c1c1c !important;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-expand-lg .nav-link {
+  color: #30d5c8;
+  transition: color 0.3s ease;
+}
+
+.navbar-expand-lg .navbar-brand:hover, .navbar-expand-lg .nav-link:hover {
+  color: #bbb;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: #30d5c8;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  background-color: #333;
+  border-radius: 0.5rem;
+}
