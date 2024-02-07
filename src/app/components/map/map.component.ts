@@ -137,7 +137,6 @@ export class MapComponent implements AfterViewInit {
               iconAnchor: [13, 41],
               iconUrl: 'assets/location-dot-solid.svg',
             }),
-
           });
         },
       }),
