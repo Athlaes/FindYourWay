@@ -3,18 +3,19 @@
     <div>
       <mat-form-field class="full-size">
         <mat-label>From</mat-label>
-        <input matInput placeholder="18 rue hilbert, Nancy" />
+        <input matInput type="text" placeholder="18 rue hilbert, Nancy" [(ngModel)]="this.from"/>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="full-size">
         <mat-label>To</mat-label>
-        <input matInput placeholder="16 rue François, Paris" />
+        <input matInput type="text" placeholder="16 rue François, Paris" [(ngModel)]="this.to"/>
       </mat-form-field>
     </div>
     <div class="div-center">
-      <button class="button">Search</button>
+      <button mat-raised-button color="primary" style="background-color: #30d5c8;margin-bottom: 20px;" (click)="this.searchPoints()">Rechercher</button>
     </div>
-    <div class="map" leaflet [leafletOptions]="this.options"></div>
+    <div id="leafmap" class="map">
+    </div>
   </div>
 </div>

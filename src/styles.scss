@@ -1,20 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
-.container-centered {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
 html, body {
   height: 100vh;
   width: 100vw;
   max-height: 100%;
   max-width: 100%;
-}
-
-body {
+  background-color: #121212;
+  color: #ffffff;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.full-size {
+  width: 100%;
+}
+
+.container-centered {
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: none;
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-top.leaflet-right {
+  width: 30%;
+  height: 50%;
+}
+
+.leaflet-routing-container {
+  width: 100%;
+  color: black;
+  background-color: #ffffff;
+  padding: 10px;
+  overflow: auto;
+  height: 100%;
+  position: relative;
+
+  h2 {
+    font-size: 14pt;
+  }
+
+  h3 {
+    font-size: 12pt;
+  }
 }
