@@ -24,7 +24,7 @@ import 'leaflet-routing-machine';
   styleUrl: './map.component.scss',
 })
 export class MapComponent implements AfterViewInit {
-  private geocodingUrl = 'http://api-adresse.data.gouv.fr/search?q=';
+  private geocodingUrl = 'https://api-adresse.data.gouv.fr/search?q=';
   private map!: L.Map;
   private routingControl!: L.Routing.Control;
 
