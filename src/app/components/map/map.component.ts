@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
 import { MatFormField, MatInput, MatLabel } from '@angular/material/input';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
-import * as L from 'leaflet';
+import L from 'leaflet';
 import 'leaflet-routing-machine';
 
 @Component({

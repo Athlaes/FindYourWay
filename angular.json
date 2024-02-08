@@ -17,6 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "allowedCommonJsDependencies": [
+              "leaflet",
+              "leaflet-routing-machine"
+            ],
             "outputPath": "dist/find-your-way",
             "index": "src/index.html",
             "browser": "src/main.ts",
